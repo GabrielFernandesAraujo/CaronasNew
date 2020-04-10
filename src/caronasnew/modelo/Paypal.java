@@ -1,8 +1,44 @@
 package caronasnew.modelo;
 
+import java.util.Objects;
+
 public class Paypal {
    private String email;
    private String senha;
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.email);
+        hash = 97 * hash + Objects.hashCode(this.senha);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Paypal other = (Paypal) obj;
+        if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        if (!Objects.equals(this.senha, other.senha)) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    public String toString() {
+        return "Paypal{" + "email=" + email + '}';
+    }
 
     
         public String getEmail() {
