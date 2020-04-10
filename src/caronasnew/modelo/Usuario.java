@@ -111,4 +111,15 @@ public class Usuario {
         return "Usuario{" + "tipoUsuario=" + tipoUsuario + ", nome=" + nome + ", email=" + email + ", ra=" + ra + '}';
     }
     
+    //METRO DE CADASTRO DE USUÁRIO
+      public void cadastrarUsuario(){
+        System.out.println("Tipo: " +this.tipoUsuario);
+        System.out.println("Nome "+this.nome);
+        System.out.println("Idade: "+this.dtaNascimento);
+        System.out.println("CPF "+this.cpf);
+        System.out.println("Número de telefone: "+this.numTelefone);
+        System.out.println("E-mail: "+this.email);
+        System.out.println("RA: "+this.ra);
+    }
+    
 }
