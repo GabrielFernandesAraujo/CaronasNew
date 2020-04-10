@@ -1,12 +1,18 @@
 package caronasnew.modelo;
 
+import java.util.Date;
 import java.util.Objects;
 
 
-public class Contribuicao{
+public class Contribuicao extends Cartao {
+    
 
   
     private Double valor;
+
+    public Contribuicao(String tp, String nom, Integer num, Date dta, Integer cod) {
+        super(tp, nom, num, dta, cod);
+    }
     
     
      public Double getValor() {
