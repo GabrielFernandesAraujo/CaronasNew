@@ -1,13 +1,14 @@
 package caronasnew.modelo;
 
 import java.sql.Time;
+import java.util.Objects;
 
 public class Consulta {
-   protected String nomeMotrorista;
-   protected String dia;
-   protected Time hora;
-   protected Double valor;
-   protected Integer quantidade;
+   private String nomeMotrorista;
+   private String dia;
+   private Time hora;
+   private Double valor;
+   private Integer quantidade;
    
    public Consulta(String nomM, String day, Time hour, Double val, Integer qta){
        this.nomeMotrorista = nomM;
@@ -18,6 +19,50 @@ public class Consulta {
        
    }
 
+     public String toString() {
+        return "Consulta{" + "nomeMotrorista=" + nomeMotrorista + ", dia=" + dia + ", hora=" + hora + ", valor=" + valor + ", quantidade=" + quantidade + '}';
+    }
+
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.nomeMotrorista);
+        hash = 37 * hash + Objects.hashCode(this.hora);
+        hash = 37 * hash + Objects.hashCode(this.valor);
+        hash = 37 * hash + Objects.hashCode(this.quantidade);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Consulta other = (Consulta) obj;
+        if (!Objects.equals(this.nomeMotrorista, other.nomeMotrorista)) {
+            return false;
+        }
+        if (!Objects.equals(this.dia, other.dia)) {
+            return false;
+        }
+        if (!Objects.equals(this.hora, other.hora)) {
+            return false;
+        }
+        if (!Objects.equals(this.valor, other.valor)) {
+            return false;
+        }
+        if (!Objects.equals(this.quantidade, other.quantidade)) {
+            return false;
+        }
+        return true;
+    }
+
+  
     public String getNomeMotrorista() {
         return nomeMotrorista;
     }
