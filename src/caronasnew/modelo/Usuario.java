@@ -76,9 +76,59 @@ public class Usuario {
 
         public void setUf(char uf) {
             this.uf = uf;
-    }
-
         }
+        
+        //METRO DE equals E hashCode DOS ATRIBUTOS ENDEREÇO 
+            @Override
+        public int hashCode() {
+            int hash = 5;
+            hash = 29 * hash + Objects.hashCode(this.rua);
+            hash = 29 * hash + Objects.hashCode(this.cep);
+            hash = 29 * hash + Objects.hashCode(this.numero);
+            hash = 29 * hash + Objects.hashCode(this.complemento);
+            hash = 29 * hash + Objects.hashCode(this.bairro);
+            hash = 29 * hash + Objects.hashCode(this.cidade);
+            hash = 29 * hash + this.uf;
+            return hash;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final Endereco other = (Endereco) obj;
+            if (!Objects.equals(this.rua, other.rua)) {
+                return false;
+            }
+            if (!Objects.equals(this.cep, other.cep)) {
+                return false;
+            }
+            if (!Objects.equals(this.numero, other.numero)) {
+                return false;
+            }
+            if (!Objects.equals(this.complemento, other.complemento)) {
+                return false;
+            }
+            if (!Objects.equals(this.bairro, other.bairro)) {
+                return false;
+            }
+            if (!Objects.equals(this.cidade, other.cidade)) {
+                return false;
+            }
+            return true;
+        }
+        
+        //METRO DE toString DOS ATRIBUTOS ENDEREÇO
+                @Override
+        public String toString() {
+            return "Endereco{" + "rua=" + rua + ", cep=" + cep + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", cidade=" + cidade + ", uf=" + uf + '}';
+        }
+
+    }
     
      public String getTipoUsuario() {
         return tipoUsuario;
