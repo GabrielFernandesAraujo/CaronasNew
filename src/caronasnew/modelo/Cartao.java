@@ -1,6 +1,7 @@
 package caronasnew.modelo;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Cartao {
     private String tipoCartao;
@@ -17,6 +18,43 @@ public class Cartao {
         this.dataValidade = dta;
         this.codigoCeguranca = cod;
         
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 53 * hash + Objects.hashCode(this.tipoCartao);
+        hash = 53 * hash + Objects.hashCode(this.nome);
+        hash = 53 * hash + Objects.hashCode(this.numero);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cartao other = (Cartao) obj;
+        if (!Objects.equals(this.tipoCartao, other.tipoCartao)) {
+            return false;
+        }
+        if (!Objects.equals(this.nome, other.nome)) {
+            return false;
+        }
+        if (!Objects.equals(this.numero, other.numero)) {
+            return false;
+        }
+        return true;
+    }
+  
+    public String toString() {
+        return "Cartao{" + "tipoCartao=" + tipoCartao + ", nome=" + nome + '}';
     }
 
     public String getTipoCartao() {
