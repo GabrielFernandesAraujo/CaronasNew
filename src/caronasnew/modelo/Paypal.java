@@ -2,9 +2,16 @@ package caronasnew.modelo;
 
 import java.util.Objects;
 
-public class Paypal {
+public class Paypal extends Contribuicao{
    private String email;
    private String senha;
+   private Double valor;
+
+    public Paypal(double val) {
+        super(val);
+    }
+   
+   
 
     @Override
     public int hashCode() {
