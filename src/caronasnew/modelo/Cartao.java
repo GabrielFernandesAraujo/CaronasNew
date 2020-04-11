@@ -3,23 +3,17 @@ package caronasnew.modelo;
 import java.util.Date;
 import java.util.Objects;
 
-public class Cartao {
+public class Cartao extends Contribuicao{
     private String tipoCartao;
     private String nome;
     private Integer numero;
     private Date dataValidade;
     private Integer codigoCeguranca;
-    
-    
-    public Cartao(String tp, String nom, Integer num, Date dta, Integer cod){
-        this.tipoCartao= tp;
-        this.nome = nom;
-        this.numero = num;
-        this.dataValidade = dta;
-        this.codigoCeguranca = cod;
-        
-    }
 
+    public Cartao(double val) {
+        super(val);
+    }
+  
     @Override
     public int hashCode() {
         int hash = 3;
