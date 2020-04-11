@@ -7,8 +7,11 @@ import java.util.Objects;
 public class Contribuicao{
     
  private Double valor;
+ 
+ public Contribuicao(double val){
+     this.valor= val;
+     }
   
-   
    public Double getValor() {
         return valor;
     }
