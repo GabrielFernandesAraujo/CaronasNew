@@ -1,6 +1,8 @@
 
 package caronasnew.modelo;
 
+import java.util.Objects;
+
 public class Motorista {
      private String nomeTitular;
      private String renavam;
@@ -23,6 +25,7 @@ public class Motorista {
      private String local;
      private Integer dataEmissao;
      private Integer cnhMotorista;
+
      
     public String getNomeTitular() {
         return nomeTitular;
@@ -190,6 +193,84 @@ public class Motorista {
 
     public void setCnhMotorista(Integer cnhMotorista) {
         this.cnhMotorista = cnhMotorista;
+    }
+    
+    //ESSE É METRO DE ATRIBUTOS QUE JUGUEI SER IMPORTANTE QUE PODE FAZER A DIFENÇA NA DISTINÇÃO DE UM VEÍCULO
+  
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 61 * hash + Objects.hashCode(this.nomeTitular);
+        hash = 61 * hash + Objects.hashCode(this.renavam);
+        hash = 61 * hash + Objects.hashCode(this.exercico);
+        hash = 61 * hash + Objects.hashCode(this.cpfTitular);
+        hash = 61 * hash + Objects.hashCode(this.placa);
+        hash = 61 * hash + Objects.hashCode(this.placaAntUf);
+        hash = 61 * hash + Objects.hashCode(this.chassi);
+        hash = 61 * hash + Objects.hashCode(this.marcaModelo);
+        hash = 61 * hash + Objects.hashCode(this.anoFabricacao);
+        hash = 61 * hash + Objects.hashCode(this.cap);
+        hash = 61 * hash + Objects.hashCode(this.local);
+        hash = 61 * hash + Objects.hashCode(this.dataEmissao);
+        hash = 61 * hash + Objects.hashCode(this.cnhMotorista);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Motorista other = (Motorista) obj;
+        if (!Objects.equals(this.nomeTitular, other.nomeTitular)) {
+            return false;
+        }
+        if (!Objects.equals(this.renavam, other.renavam)) {
+            return false;
+        }
+        if (!Objects.equals(this.exercico, other.exercico)) {
+            return false;
+        }
+        if (!Objects.equals(this.cpfTitular, other.cpfTitular)) {
+            return false;
+        }
+        if (!Objects.equals(this.placa, other.placa)) {
+            return false;
+        }
+        if (!Objects.equals(this.placaAntUf, other.placaAntUf)) {
+            return false;
+        }
+        if (!Objects.equals(this.chassi, other.chassi)) {
+            return false;
+        }
+        if (!Objects.equals(this.marcaModelo, other.marcaModelo)) {
+            return false;
+        }
+        if (!Objects.equals(this.anoFabricacao, other.anoFabricacao)) {
+            return false;
+        }
+        if (!Objects.equals(this.cap, other.cap)) {
+            return false;
+        }
+        if (!Objects.equals(this.local, other.local)) {
+            return false;
+        }
+        if (!Objects.equals(this.dataEmissao, other.dataEmissao)) {
+            return false;
+        }
+        if (!Objects.equals(this.cnhMotorista, other.cnhMotorista)) {
+            return false;
+        }
+        return true;
+    }
+     
+      //METRO QUE JUGUEI IMPORTANTE PARA MOSTRA PARA UM USUÁRIO COM ESSA FORMATAÇÃO;
+    @Override
+    public String toString() {
+        return "Motorista{" + "nomeTitular=" + nomeTitular + ", placa=" + placa + ", marcaModelo=" + marcaModelo + ", cor=" + cor + ", dataEmissao=" + dataEmissao + '}';
     }
     
 }
