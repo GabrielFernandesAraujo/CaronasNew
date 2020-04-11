@@ -26,9 +26,10 @@ public class Motorista extends Usuario{
      private String local;
      private Integer dataEmissao;
      private Integer cnhMotorista;
-
-     //METRO CONSTRUSTOR
-    public Motorista(String tU, String nom, Calendar dta, String CPF, char numT, String em, Integer RA, Integer cep, String rua, String numero, String complemento, String bairro, String cidade, char uf) {
+    /** 
+      * @author METRO CONSTRUSTOR DA classe Motorista com a superclasse Usuario
+      **/   
+    public Motorista(String tU, String nom, Calendar dta, String CPF, Integer numT, String em, Integer RA, Integer cep, String rua, String numero, String complemento, String bairro, String cidade, char uf) {
         super(tU, nom, dta, CPF, numT, em, RA, cep, rua, numero, complemento, bairro, cidade, uf);
     }
 
@@ -201,9 +202,9 @@ public class Motorista extends Usuario{
     public void setCnhMotorista(Integer cnhMotorista) {
         this.cnhMotorista = cnhMotorista;
     }
-    
-    //ESSE É METRO DE ATRIBUTOS QUE JUGUEI SER IMPORTANTE QUE PODE FAZER A DIFENÇA NA DISTINÇÃO DE UM VEÍCULO
-  
+        /** 
+        * @author METRO DE equals E hashCode DOS Motorista
+        **/
     @Override
     public int hashCode() {
         int hash = 5;
@@ -274,7 +275,9 @@ public class Motorista extends Usuario{
         return true;
     }
      
-      //METRO QUE JUGUEI IMPORTANTE PARA MOSTRA PARA UM USUÁRIO COM ESSA FORMATAÇÃO;
+        /** 
+        * @author METRO toString da classe Motorista
+        **/
     @Override
     public String toString() {
         return "Motorista{" + "nomeTitular=" + nomeTitular + ", placa=" + placa + ", marcaModelo=" + marcaModelo + ", cor=" + cor + ", dataEmissao=" + dataEmissao + '}';
