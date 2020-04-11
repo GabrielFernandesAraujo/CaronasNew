@@ -11,7 +11,7 @@ public class Usuario {
     private String nome;
     private Calendar dtaNascimento;
     private String cpf;
-    private char numTelefone;
+    private Integer numTelefone;
     private String email;
     private Integer ra;
     private Endereco end;
@@ -20,7 +20,7 @@ public class Usuario {
       * @author METRO CONSTRUTOR
       **
       **/
-       public Usuario(String tU, String nom,Calendar dta,String CPF,char numT,String em,Integer RA, Integer cep, String rua,
+       public Usuario(String tU, String nom,Calendar dta,String CPF,Integer numT,String em,Integer RA, Integer cep, String rua,
                String numero,String complemento, String bairro, String cidade,char uf ){
         this.tipoUsuario = tU;
         this.nome = nom;
@@ -160,8 +160,9 @@ public class Usuario {
         public String toString() {
             return "Endereco{" + "rua=" + rua + ", cep=" + cep + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", cidade=" + cidade + ", uf=" + uf + '}';
         }
-
     }
+        
+        
     /**
          * @author METRO GET E SET DA CLASSE USUARIO
       **/
@@ -198,11 +199,11 @@ public class Usuario {
         this.cpf = CPF;
     }
 
-    public char getNumTelefone() {
+    public Integer getNumTelefone() {
         return numTelefone;
     }
 
-    public void setNumTelefone(char numT) {
+    public void setNumTelefone(Integer numT) {
         this.numTelefone = numT;
     }
 
