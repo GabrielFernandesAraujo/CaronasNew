@@ -1,7 +1,9 @@
 //**
 package caronasnew.modelo;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Objects;
 
 public class Usuario {
@@ -13,9 +15,11 @@ public class Usuario {
     private String email;
     private Integer ra;
     private Endereco end;
-    
-    
-        
+    private List<Contribuicao>contribuicao = new ArrayList<>();
+     /** 
+      * @author METRO CONSTRUTOR
+      **
+      **/
        public Usuario(String tU, String nom,Calendar dta,String CPF,char numT,String em,Integer RA, Integer cep, String rua,
                String numero,String complemento, String bairro, String cidade,char uf ){
         this.tipoUsuario = tU;
@@ -34,7 +38,10 @@ public class Usuario {
         this.end.uf = uf;
     }
        
-    //CLASSE INTERNA DE INDEREÇO
+    /** 
+     * @author CLASSE INTERNA DE INDEREÇO COM METROS GET E SET
+     **/
+       
         public class Endereco{
         private String rua;
         private Integer cep;
@@ -99,7 +106,10 @@ public class Usuario {
             this.uf = uf;
         }
         
-        //METRO DE equals E hashCode DOS ATRIBUTOS ENDEREÇO 
+         /** 
+         * @author METRO DE equals E hashCode DOS ATRIBUTOS ENDEREÇO
+        **/
+         
         @Override
         public int hashCode() {
             int hash = 5;
@@ -143,14 +153,18 @@ public class Usuario {
             return true;
         }
         
-        //METRO DE toString DOS ATRIBUTOS ENDEREÇO
+        /**
+         * @author METRO DE toString DOS ATRIBUTOS ENDEREÇO
+         **/
                 @Override
         public String toString() {
             return "Endereco{" + "rua=" + rua + ", cep=" + cep + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", cidade=" + cidade + ", uf=" + uf + '}';
         }
 
     }
-    
+    /**
+         * @author METRO GET E SET DA CLASSE USUARIO
+      **/
      public String getTipoUsuario() {
         return tipoUsuario;
     }
@@ -208,7 +222,9 @@ public class Usuario {
         this.ra = RA;
     }
     
-        //ESSE É METRO DE ATRIBUTOS QUE JUGUEI SER IMPORTANTE PARA DIFERENCIAR UM USUARIO DO OUTRO
+        /**
+         * @authorESSE É METRO DE ATRIBUTOS QUE JUGUEI SER IMPORTANTE PARA DIFERENCIAR UM USUARIO DO OUTRO
+         * */
       @Override
     public int hashCode() {
         int hash = 3;
@@ -242,14 +258,17 @@ public class Usuario {
         }
         return true;
     }
-    
-        //o metro toString do que juguei importante mostrar
+     /**
+         * @author METRO DE toString DOS ATRIBUTOS USUÁRIO
+     **/
     @Override
     public String toString() {
         return "Usuario{" + "tipoUsuario=" + tipoUsuario + ", nome=" + nome + ", email=" + email + ", ra=" + ra + '}';
     }
     
-    //METRO DE CADASTRO DE USUÁRIO
+    /**
+     * @author METRO DE CADASTRO DE USUÁRIO
+     * */
       public void cadastrarUsuario(){
         System.out.println("Tipo: " +this.tipoUsuario);
         System.out.println("Nome "+this.nome);
