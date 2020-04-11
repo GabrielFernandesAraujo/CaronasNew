@@ -12,7 +12,28 @@ public class Usuario {
     private char numTelefone;
     private String email;
     private Integer ra;
+    private Endereco end;
     
+    
+        
+       public Usuario(String tU, String nom,Calendar dta,String CPF,char numT,String em,Integer RA, Integer cep, String rua,
+               String numero,String complemento, String bairro, String cidade,char uf ){
+        this.tipoUsuario = tU;
+        this.nome = nom;
+        this.dtaNascimento = dta;
+        this.cpf = CPF;
+        this.numTelefone = numT;
+        this.email = em;
+        this.ra = RA;
+        this.end. cep = cep;
+        this.end.rua = rua;
+        this.end.numero = numero;
+        this.end.complemento = complemento;
+        this.end.bairro= bairro;
+        this.end.cidade = cidade;
+        this.end.uf = uf;
+    }
+       
     //CLASSE INTERNA DE INDEREÇO
         public class Endereco{
         private String rua;
@@ -23,7 +44,7 @@ public class Usuario {
         private String cidade;
         private char uf;
         
-                public String getRua() {
+        public String getRua() {
             return rua;
         }
 
@@ -79,7 +100,7 @@ public class Usuario {
         }
         
         //METRO DE equals E hashCode DOS ATRIBUTOS ENDEREÇO 
-            @Override
+        @Override
         public int hashCode() {
             int hash = 5;
             hash = 29 * hash + Objects.hashCode(this.rua);
