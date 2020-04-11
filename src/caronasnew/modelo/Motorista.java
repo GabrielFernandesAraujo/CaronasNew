@@ -1,9 +1,10 @@
 
 package caronasnew.modelo;
 
+import java.util.Calendar;
 import java.util.Objects;
 
-public class Motorista {
+public class Motorista extends Usuario{
      private String nomeTitular;
      private String renavam;
      private Integer exercico;
@@ -26,6 +27,12 @@ public class Motorista {
      private Integer dataEmissao;
      private Integer cnhMotorista;
 
+     //METRO CONSTRUSTOR
+    public Motorista(String tU, String nom, Calendar dta, String CPF, char numT, String em, Integer RA, Integer cep, String rua, String numero, String complemento, String bairro, String cidade, char uf) {
+        super(tU, nom, dta, CPF, numT, em, RA, cep, rua, numero, complemento, bairro, cidade, uf);
+    }
+
+  
      
     public String getNomeTitular() {
         return nomeTitular;
