@@ -4,18 +4,12 @@ import java.util.Date;
 import java.util.Objects;
 
 
-public class Contribuicao extends Cartao {
+public class Contribuicao{
     
-
+ private Double valor;
   
-    private Double valor;
-
-    public Contribuicao(String tp, String nom, Integer num, Date dta, Integer cod) {
-        super(tp, nom, num, dta, cod);
-    }
-    
-    
-     public Double getValor() {
+   
+   public Double getValor() {
         return valor;
     }
 
