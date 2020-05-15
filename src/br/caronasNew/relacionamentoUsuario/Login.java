@@ -1,5 +1,7 @@
 package br.caronasNew.relacionamentoUsuario;
 
+import java.util.Objects;
+
 /** Essa classe é de Login, foi criado os atributos, emcapsulamento 
  dos atributos e metro construstor.
  *
@@ -35,5 +37,34 @@ public class Login {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+     /**
+         * @author miguelcosta  METRO DE hashCode equals
+         * */
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.nomeUsuario);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Login other = (Login) obj;
+        if (!Objects.equals(this.nomeUsuario, other.nomeUsuario)) {
+            return false;
+        }
+        if (!Objects.equals(this.senha, other.senha)) {
+            return false;
+        }
+        return true;
+    }
+    
     
 }
