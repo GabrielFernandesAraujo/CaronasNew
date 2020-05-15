@@ -3,6 +3,10 @@ package modelo.negocio;
 import java.sql.Time;
 import java.util.Objects;
 
+ /*
+  * @author Gabriel
+   */
+
 public class Consulta {
    private String nomeMotrorista;
    private String dia;
@@ -18,11 +22,18 @@ public class Consulta {
        this.quantidade = qta;
        
    }
+ /*
+  * @author METADO DE toString na classe Consulta
+  */
+
 
      public String toString() {
         return "Consulta{" + "nomeMotrorista=" + nomeMotrorista + ", dia=" + dia + ", hora=" + hora + ", valor=" + valor + ", quantidade=" + quantidade + '}';
     }
 
+     /* 
+      * @author METODO DE equals E hashCode Da classe Consulta
+      */
     public int hashCode() {
         int hash = 5;
         hash = 37 * hash + Objects.hashCode(this.nomeMotrorista);
@@ -61,6 +72,10 @@ public class Consulta {
         }
         return true;
     }
+
+        /*
+      * @author METADO DE get e set para classe Consulta
+      */
 
   
     public String getNomeMotrorista() {
