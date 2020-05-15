@@ -4,6 +4,7 @@ package br.caronasNew.relacionamentoUsuario;
  dos atributos e metro construstor.
  *
  * @author miguelcosta
+ * 
  */
 public class Login {
     private String nomeUsuario;
