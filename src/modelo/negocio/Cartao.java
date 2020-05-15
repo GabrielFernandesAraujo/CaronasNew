@@ -3,6 +3,10 @@ package modelo.negocio;
 import java.util.Date;
 import java.util.Objects;
 
+ /*
+  * @author Gabriel
+  */
+
 public class Cartao extends Contribuicao{
     private String tipoCartao;
     private String nome;
@@ -13,6 +17,10 @@ public class Cartao extends Contribuicao{
     public Cartao(double val) {
         super(val);
     }
+    
+     /* 
+      * @author METODO DE equals E hashCode Da classe cartão
+      */
   
     @Override
     public int hashCode() {
@@ -50,6 +58,10 @@ public class Cartao extends Contribuicao{
     public String toString() {
         return "Cartao{" + "tipoCartao=" + tipoCartao + ", nome=" + nome + '}';
     }
+
+        /*
+      * @author METADO DE get e set para classe Cartao
+      */
 
     public String getTipoCartao() {
         return tipoCartao;
