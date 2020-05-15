@@ -2,6 +2,11 @@ package modelo.negocio;
 
 import java.util.Objects;
 
+
+ /* 
+  * @author Gabriel
+  */
+  
 public class Paypal extends Contribuicao{
    private String email;
    private String senha;
@@ -12,6 +17,9 @@ public class Paypal extends Contribuicao{
     }
    
    
+ /*
+  * @author METADO DE equals E hashCode Da classe Paypal
+  */
 
     @Override
     public int hashCode() {
@@ -41,6 +49,11 @@ public class Paypal extends Contribuicao{
         }
         return true;
     }
+    
+     /*
+      * @author METADO DE toString na classe Paypal
+      */
+
 
     
     public String toString() {
@@ -52,6 +65,9 @@ public class Paypal extends Contribuicao{
         return email;
     }
 
+      /*
+      * @author METADO DE get e set para classe Paypal
+      */
   
     public void setEmail(String email) {
         this.email = email;
