@@ -1,8 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/** Essa classe é de Corrida, foi criado os atributos, emcapsulamento 
+ dos atributos, metro construtor e toString.
+*/
 package br.caronasNew.relacionamentoUsuario;
 
 /**
@@ -66,5 +64,11 @@ public class Corrida {
     public void setHoras(Time horas) {
         this.horas = horas;
     }
+
+    @Override
+    public String toString() {
+        return "Corrida{" + "origem=" + origem + ", destino=" + destino + ", data=" + data + ", horas=" + horas + '}';
+    }
+    
    
 }
