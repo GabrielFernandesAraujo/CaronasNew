@@ -23,6 +23,7 @@ public class Corrida {
         this.destino = destino;
         this.data = data;
         
+        
     }
     
     

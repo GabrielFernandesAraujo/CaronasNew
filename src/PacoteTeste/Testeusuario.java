@@ -18,6 +18,7 @@ public class Testeusuario {
         Usuario usuario = new Usuario("Aluno", "Miguel", x , "144.255.369-56","(31)9.92095465", "miguel.ncmg@hotmail.com", 12105987,30570600, "Rua Henrique Badaró Portugal",
                 "51", "Casa", "Palmeiras", "Belo Horizonte", "MG");
         usuario.cadastrarUsuario();
+        
      }
     
 }

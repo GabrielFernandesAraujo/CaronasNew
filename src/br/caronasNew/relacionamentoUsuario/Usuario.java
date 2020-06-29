@@ -150,8 +150,7 @@ public class Usuario {
         
     }
 
-  
-
+ 
     public String getCpf() {
         return cpf;
     }
