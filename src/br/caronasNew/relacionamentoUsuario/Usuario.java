@@ -8,16 +8,16 @@ package br.caronasNew.relacionamentoUsuario;
 
 import caronasnew.modelo.Contribuicao;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
 public class Usuario {
     private String tipoUsuario;
     private String nome;
-    private Calendar dtaNascimento;
+    private Date dtaNascimento;
     private String cpf;
-    private Integer numTelefone;
+    private String numTelefone;
     private String email;
     private Integer ra;
     private Endereco end;
@@ -26,8 +26,8 @@ public class Usuario {
         METRO CONSTRUTOR
       
       */
-       public Usuario(String tU, String nom,Calendar dta,String CPF,Integer numT,String em,Integer RA, Integer cep, String rua,
-               String numero,String complemento, String bairro, String cidade,char uf ){
+       public Usuario(String tU, String nom,Date dta,String CPF,String numT,String em,Integer RA, Integer cep, String rua,
+               String numero,String complemento, String bairro, String cidade,String uf ){
         this.tipoUsuario = tU;
         this.nome = nom;
         this.dtaNascimento = dta;
@@ -55,7 +55,7 @@ public class Usuario {
         private String complemento;
         private String bairro;
         private String cidade;
-        private char uf;
+        private String uf;
         
         public String getRua() {
             return rua;
@@ -104,11 +104,11 @@ public class Usuario {
             this.cidade = cidade;
         }
 
-        public char getUf() {
+        public String getUf() {
             return uf;
         }
 
-        public void setUf(char uf) {
+        public void setUf(String uf) {
             this.uf = uf;
         }
     
@@ -141,12 +141,13 @@ public class Usuario {
         this.nome = nom;
     }
     
-      public Calendar getDtaNascimento() {
+      public Date getDtaNascimento() {
         return dtaNascimento;
     }
 
-    public void setDtaIdade(Calendar dta) {
+    public void setDtaIdade(Date dta) {
         this.dtaNascimento = dta;
+        
     }
 
   
@@ -159,11 +160,11 @@ public class Usuario {
         this.cpf = CPF;
     }
 
-    public Integer getNumTelefone() {
+    public String getNumTelefone() {
         return numTelefone;
     }
 
-    public void setNumTelefone(Integer numT) {
+    public void setNumTelefone(String numT) {
         this.numTelefone = numT;
     }
 

@@ -65,6 +65,10 @@ public class Login {
         }
         return true;
     }
+    public void confimarLogin(){
+        System.out.println("Nome: "+this.nomeUsuario);
+        System.out.println("Senha: "+this.senha);
+    }
     
     
 }
