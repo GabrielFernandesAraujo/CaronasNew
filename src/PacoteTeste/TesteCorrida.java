@@ -18,7 +18,6 @@ public class TesteCorrida {
        
        Corrida corrida = new Corrida("Rua A", "Rua Paulo Rezende", y);
        corrida.corrida();
-       
     }
     
 }

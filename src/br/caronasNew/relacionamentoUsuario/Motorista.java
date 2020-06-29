@@ -32,7 +32,6 @@ public class Motorista extends Usuario{
     public Motorista(String tU, String nom, Date dta, String CPF, String numT, String em, Integer RA, Integer cep, String rua, String numero, String complemento, String bairro, String cidade, String uf) {
         super(tU, nom, dta, CPF, numT, em, RA, cep, rua, numero, complemento, bairro, cidade, uf);
     }
-    
 
     
     /** 
